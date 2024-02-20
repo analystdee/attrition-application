@@ -25,6 +25,18 @@ def main():
     3. **Explore**: Explore the features of each page and interact with the elements provided.
     """)
 
+    # Feedback Mechanism
+    st.subheader('Feedback')
+    feedback = st.text_area('Please share your feedback or suggestions here:', height=100)
+    submit_button = st.button('Submit Feedback')
+
+    if submit_button:
+        if feedback:
+            # Process the feedback (you can save it to a database, send it via email, etc.)
+            st.success('Thank you for your feedback! We appreciate your input.')
+        else:
+            st.warning('Please provide your feedback before submitting.')
+
     # Contact Information
     st.subheader('Contact Us')
     st.write('If you need assistance or have any questions, please contact us at deedahahmed01@gmail.com.')
