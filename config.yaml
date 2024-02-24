@@ -17,3 +17,7 @@ cookie:
 preauthorized:
   emails:
   - melsby@gmail.com
+
+
+  with open('C:/Users/Said Ahmed/Desktop/personalprojects/attrition-application/config.yaml/config.yaml', 'w') as file:
+    yaml.dump(config, file, default_flow_style=False)
