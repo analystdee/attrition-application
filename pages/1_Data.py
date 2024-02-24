@@ -12,7 +12,7 @@ st.set_page_config(
 
 
 
-# Define the path to your CSV file
+#path to CSV file
 csv_file_path = r'C:\Users\Said Ahmed\Desktop\personalprojects\attrition-application\ml_dataset.csv'
 
 # Initialize an empty list to store the data
@@ -24,3 +24,10 @@ with open(csv_file_path, 'r') as file:
     for row in csv_reader:
         # Append each row as a dictionary to the csv_data list
         csv_data.append(row)
+# Convert the list of dictionaries to a DataFrame
+df = pd.DataFrame(csv_data)
+
+
+ #Display the data 
+st.write(" Vodafone Data:")
+st.write(df)
