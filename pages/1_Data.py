@@ -1,8 +1,7 @@
 import streamlit as st
-import streamlit as st
 import pandas as pd
-import mysql.connector
-import csv
+import pyodbc
+
 
 st.set_page_config(
     page_title='View Data',
@@ -10,24 +9,60 @@ st.set_page_config(
     layout='wide'
 )
 
+st.title('properiority Data')
 
 
-#path to CSV file
-csv_file_path = r'C:\Users\Said Ahmed\Desktop\personalprojects\attrition-application\ml_dataset.csv'
+def initialize_connection():
+    connection = pyodbc.connect(
+        'DRIVER={{ODBC Driver 18 for SQL Server}}'
+        + st.secrets['server_name'],
+        'DATABASE={database}'
+        + st.secrets['database'],
+        'UID={username}'
+        + st.secrets['user'],
+        'PWD={password}'
+        + st. secrets['password']
+    )
 
-# Initialize an empty list to store the data
-csv_data = []
-
-# Reading data from the CSV file and storing it in the list
-with open(csv_file_path, 'r') as file:
-    csv_reader = csv.DictReader(file)
-    for row in csv_reader:
-        # Append each row as a dictionary to the csv_data list
-        csv_data.append(row)
-# Convert the list of dictionaries to a DataFrame
-df = pd.DataFrame(csv_data)
+    return connection
 
 
- #Display the data 
-st.write(" Vodafone Data:")
-st.write(df)
+conn= initialize_connection
+
+
+st.cache_data()
+def query_database(query):
+    with  conn.cursor() as cur:
+        cur.execute(query)
+        rows = cur.fetchall()
+
+        df= pd.DataFrame.from_records(data=rows, columns=[column[0]for column in cur.description])
+
+    
+    return df
+
+
+st.cache_data()
+def select_all_features():
+    query= "Select * from LP2_Telco_churn_first_3000"
+    df= query_database(query)
+    return df
+     
+
+# def select_numeric_features():
+#     query= "Select * from LP2_Telco_churn_first_3000"
+#     df= query_database(query)
+#     return df
+
+
+if __name__ == "__main__":
+    col1,col2= st.columns(2)
+    with col1:
+        st.selectbox("select type of feature ", options= ['All features', 'numeric features'],
+        key= "selected_columns")
+
+    with col2:
+        pass
+
+    if st.session_state['selected_columns']== 'All features':
+        select_all_features()

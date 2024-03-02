@@ -21,3 +21,12 @@ preauthorized:
 
   with open('C:/Users/Said Ahmed/Desktop/personalprojects/attrition-application/config.yaml/config.yaml', 'w') as file:
     yaml.dump(config, file, default_flow_style=False)
+
+
+
+database:
+  server_name: 'dap-projects-database.database.windows.net'
+  database: 'dapDB'
+  user: 'LP2_project'
+  password: 'Stat$AndD@t@Rul3'
+
