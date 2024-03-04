@@ -9,25 +9,26 @@ st.set_page_config(
     layout='wide'
 )
 
-st.title('properiority Data')
+st.title('propriertory Data')
 
 
+st.cache_resource(show_spinner='Connecting to Database...')
 def initialize_connection():
     connection = pyodbc.connect(
-        'DRIVER={{ODBC Driver 18 for SQL Server}}'
-        + st.secrets['server_name'],
-        'DATABASE={database}'
-        + st.secrets['database'],
-        'UID={username}'
-        + st.secrets['user'],
-        'PWD={password}'
-        + st. secrets['password']
+        "DRIVER={ODBC Driver 18 for SQL Server};SERVER="
+        + st.secrets["SERVER"]
+        +";DATABASE="
+        + st.secrets["DATABASE"]
+        +";UID="
+        + st.secrets["UID"]
+        +";PWD="
+        + st. secrets["PWD"]
     )
 
     return connection
 
 
-conn= initialize_connection
+conn= initialize_connection()
 
 
 st.cache_data()
@@ -36,7 +37,7 @@ def query_database(query):
         cur.execute(query)
         rows = cur.fetchall()
 
-        df= pd.DataFrame.from_records(data=rows, columns=[column[0]for column in cur.description])
+        df= pd.DataFrame.from_records(data=rows, columns=[column[0] for column in cur.description])
 
     
     return df
@@ -65,4 +66,9 @@ if __name__ == "__main__":
         pass
 
     if st.session_state['selected_columns']== 'All features':
-        select_all_features()
+        data = select_all_features()
+        st.dataframe(data)
+
+
+    st.write(st.session_state)
+
