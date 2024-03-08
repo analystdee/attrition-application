@@ -24,9 +24,5 @@ preauthorized:
 
 
 
-database:
-  server_name: 'dap-projects-database.database.windows.net'
-  database: 'dapDB'
-  user: 'LP2_project'
-  password: 'Stat$AndD@t@Rul3'
+
 

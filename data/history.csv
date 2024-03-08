@@ -1,0 +1,2 @@
+gender,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Prediction Time,Model Used
+Female,No,No,5,Yes,No,DSL,No,Yes,Yes,No,No,No,Two year,No,Electronic check,400,2000,2024-03-08,svc
