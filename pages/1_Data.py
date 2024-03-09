@@ -5,7 +5,7 @@ import pyodbc
 
 st.set_page_config(
     page_title='View Data',
-    page_icon='',
+    page_icon=':clipboard:',
     layout='wide'
 )
 

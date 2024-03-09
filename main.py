@@ -4,6 +4,13 @@ import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 
+
+st.set_page_config(
+    page_title='Home page',
+    page_icon=':globe_with_meridians:',
+    layout='wide'
+)
+
 def main():
         st.title('Home Page')
         st.write('Welcome to my attrition prediction App!')
