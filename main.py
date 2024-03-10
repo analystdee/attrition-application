@@ -19,8 +19,13 @@ def main():
     if not st.session_state.authenticated:
         with st.sidebar:
             st.title('Login')
+
+             # Test Account
+            st.subheader('Test Account')
+            st.write('Username: khadija')
+            st.write('Password: 123')
     
-            with open('C:/Users/Said Ahmed/Desktop/personalprojects/attrition-application/config.yaml') as file:
+            with open('./attrition-application/config.yaml') as file:
                 config = yaml.load(file, Loader=SafeLoader)
 
             authenticator = stauth.Authenticate(
@@ -35,15 +40,22 @@ def main():
 
     else:
         st.title('Home Page')
-        st.write('Welcome to my attrition prediction App!')
-        st.write('This is a demo churning prediction application built with Streamlit.')
-        st.write('Please login to access the features. user: Khadija ,  password: 123')
+        st.write('Welcome to my attrition prediction App!Attrition prediction app is a Machine Learning application that predicts the likelihood of a customer to leave the services based on various factors')
+        st.write('Please login to access the features.')
 
         # Add sections explaining how the app works
         st.header('How the App Works')
-        st.write('This app predicts churn based on a machine learning model trained on historical data.')
         st.write('To make a prediction, users need to provide certain input features such as customer information and service usage.')
         st.write('The model then processes this information and outputs the likelihood of a customer churning.')
+        
+        st.subheader('Key Features')
+        st.write("""
+        - View Data
+        - Dashboard
+        - Prediction
+        - History
+        """)
+        
 
     
 
