@@ -29,10 +29,10 @@ Database:Proprietory data from Vodafone
 Language:Python
 
 ### Key Features
-Home - That summarizes details about the project
-Data - That shows the sample data used for model training
-Dashboard - That gives visual insights to the data
-predict - Shows customer churn prediction
+- Home - That summarizes details about the project
+- Data - That shows the sample data used for model training
+- Dashboard - That gives visual insights to the data
+- predict - Shows customer churn prediction
 
 ### Prerequisites Libraries:
 Please Check in requirements.txt for the necessary libraries
@@ -52,7 +52,7 @@ Please Check in requirements.txt for the necessary libraries
 ### How to run
 To run the program, run the follwing code in your terminal
 
-$ Streamlit run Login.py
+    Streamlit run Login.py
 
 A Login webpage will open
 To continue login using the provided credentials on the sidebar:[Username=khadija] and [Password=123]
