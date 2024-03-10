@@ -97,7 +97,7 @@ except yaml.YAMLError:
  
 # Define functions
 def layout_for_logged_in_users(username):
-    st.title(f'Welcome to the Dashboard, {username}')
+    st.title(f'Welcome to the main page, {username}')
     # Add content for logged-in users here
  
     # Display Attrition Insight content
@@ -139,7 +139,7 @@ def authenticate(username, password):
     return False
  
 # Initialize Streamlit
-st.set_page_config(page_title="Vodafone Dashboard", page_icon=":chart_with_upwards_trend:")
+st.set_page_config(page_title="Home Page", page_icon=":globe_with_meridians:")
  
 # Main content area
 if 'name' not in st.session_state:
