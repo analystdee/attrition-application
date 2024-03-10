@@ -134,9 +134,15 @@ def layout_for_logged_in_users(username):
 def authenticate(username, password):
     if username in config['credentials']['usernames']:
         stored_password = config['credentials']['usernames'][username]['password']
+        print("Entered password:", password)  # Add this line for debugging
+        print("Stored password:", stored_password)  # Add this line for debugging
         if password == stored_password:
             return True
     return False
+    #     stored_password = config['credentials']['usernames'][username]['password']
+    #     if password == stored_password:
+    #         return True
+    # return False
  
 # Initialize Streamlit
 st.set_page_config(page_title="Home Page", page_icon=":globe_with_meridians:")
