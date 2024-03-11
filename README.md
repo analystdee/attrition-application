@@ -1,7 +1,25 @@
-# Churn Prediction App
-Churn prediction app is an app that allows a user to predict the likelihood of a customer churning based on a number of factors. The app also provides a probability based on the factor therefore giving you the predict and the probability of the predict.
 
-Defination of terms:
+📗 Table of Contents
+Attrition Meter
+🛠 Built With
+Tech Stack
+Key Features
+💻 Getting Started
+Prerequisites
+Setup
+Install
+Usage
+👥 Authors
+🔭 Future Features
+🤝 Contributing
+⭐️ Show your support
+🙏 Acknowledgments
+📝 License
+<!-- PROJECT DESCRIPTION -->
+Attrition Application <a name="about-project">
+Attrition Application is a data application that allows users to interact with a machine learning model, view data visualizations on the data and see the values of their input saved for future use.
+
+Features
 - Gender-- Whether the customer is a male or a female
 - SeniorCitizen -- Whether a customer is a senior citizen or not
 - Partner -- Whether the customer has a partner or not
@@ -21,52 +39,102 @@ Defination of terms:
 - Payment Method -- The customer's payment method
 - MonthlyCharges -- The amount charged to the customer monthly
 
-## Built With:
-GUI:streamlit
+🛠 Built With <a name="built-with">
+Streamlit <a name="streamlit">
+<details> <summary>GUI</summary>
 
-Database:Proprietory data from Vodafone
+<ul> <li><a href="">Streamlit</a></li> </ul>
+</details>
 
-Language:Python
+<details> <summary>Database</summary>
 
-### Key Features
-- Home - That summarizes details about the project
-- Data - That shows the sample data used for model training
-- Dashboard - That gives visual insights to the data
-- predict - Shows customer churn prediction
+<ul> <li><a href="">Microsoft SQL Server</a></li> </ul>
+</details>
 
-### Prerequisites Libraries:
-Please Check in requirements.txt for the necessary libraries
-### How to get Started
-1) Clone this repository into your desired folder
+<details> <summary>Language</summary>
 
-    git clone https://github.com/analystdee/attrition-application.git
-2) Create a Virtual environment
+<ul> <li><a href="">Python</a></li> </ul>
+</details>
 
-    python -m venv
-3) Activate the Virtual environment
+<details> <summary>Model</summary>
 
-    venv/Scripts/activate
-4) install the necessary Libraries in requirements.txt
+<ul> <li><a href="">Sklearn</a></li> </ul>
+</details>
 
-    pip install requiremnts.txt
-### How to run
-To run the program, run the follwing code in your terminal
+<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- Features -->
+Key Features <a name="key-features">
+A data application that presents visualizations on both the exploratory data and the KPIs
+A predicitons page to predict by specifying the model you want to use
+View proprietory data loaded in real-time form the remote server
+Predictions are save for further analysis in the future and users can view the history of their prediction input values
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+image
 
-    Streamlit run Login.py
+<!-- GETTING STARTED -->
+💻 Getting Started <a name="getting-started">
+To get a local copy up and running, follow these steps.
 
-A Login webpage will open
-To continue login using the provided credentials on the sidebar:[Username=khadija] and [Password=123]
-Proceed to the predict page to perform prediction Alt text
-Predict page overview Alt text
+Prerequisites
+In order to run this project you need:
 
-Authors:
-khadija Ahmed
+Python
+Streamlit
+Setup
+Clone this repository to your desired folder:
 
-Github: [My GitHub Profile](https://github.com/analystdee)
+  cd my-folder
+  git clone https://github.com/analystdee/attrition-application.git
+Change into the cloned repository
 
+  cd Attrition-Meter
+  
+Create a virtual environment
+
+
+python -m venv env
+
+Activate the virtual environment
+
+    virtual_env/Scripts/activate
+Install
+Here, you need to recursively install the packages in the requirements.txt file using the command below
+
+   pip install -r requirements.txt
+Usage
+To run the project, execute the following command:
+
+    streamlit run main.py
+
+A webpage opens up to view the app
+Login to the app with username=khadija and password:123
+Finally test a prediction by clicking on the predicitons page
+Note: Users may not be able to access the View Data page as the secrets file is not checked into git
+<!-- AUTHORS -->
+👥 Authors <a name="authors">
+🕵🏽‍♀️ khadija ahmed
+
+GitHub: [My GitHub Profile](https://github.com/analystdee)
 LinkedIn: [My Linked in Profile](www.linkedin.com/in/khadija-abdallah)
+<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- FUTURE FEATURES -->
+🔭 Future Features <a name="future-features">
+Add a front end application for users
+<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- CONTRIBUTING -->
+🤝 Contributing <a name="contributing">
+Contributions, issues, and feature requests are welcome!
 
-Medium: [My Medium Profile](https://medium.com/@deedahahmed01)
+Feel free to check the issues page.
 
-LICENSE:
-MIT
+<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- SUPPORT -->
+⭐️ Show your support <a name="support">
+If you like this project kindly show some love, give it a 🌟 STAR 🌟
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- ACKNOWLEDGEMENTS -->
+🙏 Acknowledgments <a name="acknowledgements">
+I would like to thank all the free available resource made available online and AZUBI AFRICA for equipping me 
+with necessary data analytics knowledge.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- LICENSE -->
+📝 License <a name="license">
+This project is MIT licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
